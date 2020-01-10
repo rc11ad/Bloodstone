@@ -7,7 +7,7 @@ public class Example : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //taint sniffers
+
     }
 
     // Update is called once per frame
@@ -15,4 +15,6 @@ public class Example : MonoBehaviour
     {
         
     }
+
+    
 }

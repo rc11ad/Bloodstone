@@ -159,6 +159,8 @@ namespace Pathfinding {
 		/// <summary>Current path which is followed</summary>
 		protected Path path;
 
+        public Path ThePath { get { return path; } }
+
 		/// <summary>Helper which calculates points along the current path</summary>
 		protected PathInterpolator interpolator = new PathInterpolator();
 
