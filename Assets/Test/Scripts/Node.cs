@@ -18,9 +18,15 @@ namespace PathSystem
 			IndexPosition = indexPos;
 		}
 
-		public void SetScore(int g, int h)
+		public void UpdateHScore(Node target)
 		{
+			H = (int)(Mathf.Abs(target.Position.x - Position.x) + Mathf.Abs(target.Position.y - Position.y));
+		}
 
+		public int GetHScore(Node target)
+		{
+			UpdateHScore(target);
+			return H;
 		}
 	}
 }

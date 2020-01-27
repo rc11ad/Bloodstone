@@ -61,5 +61,18 @@ namespace PathSystem
 
 			return nearNode;
 		}
+
+		public Node[] GetNodeNeighbors(Node node)
+		{
+			//up,left,down,right
+			Node[] nodes = new Node[4];
+
+			nodes[0] = NodeArr[node.IndexPosition.x, Mathf.Min(node.IndexPosition.y + 1, Size-1)]; //Limit to bounds of array.
+			nodes[1] = NodeArr[Mathf.Max(node.IndexPosition.x - 1, 0), node.IndexPosition.y];
+			nodes[2] = NodeArr[node.IndexPosition.x, Mathf.Max(node.IndexPosition.y - 1, 0)];
+			nodes[3] = NodeArr[Mathf.Min(node.IndexPosition.x + 1, Size-1), node.IndexPosition.y];
+
+			return nodes;
+		}
 	}
 }

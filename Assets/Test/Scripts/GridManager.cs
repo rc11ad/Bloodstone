@@ -15,7 +15,6 @@ namespace PathSystem
 		private void Start()
 		{
 			Grid = new Grid().SetGrid(Spacing, Size, transform.position.x, transform.position.y);
-			Debug.Log(Grid.Nodes.Count);
 		}
 
 		private void OnValidate()
